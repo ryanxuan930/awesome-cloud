@@ -1,0 +1,19 @@
+{
+ "v": 1,
+ "iter": 600000,
+ "salt": "a78TNkWTGzrNNtywJDm0qg==",
+ "files": [
+  {
+   "name": "Seminar1.pptx",
+   "enc": "1644f3583072.bin",
+   "size": 3119133,
+   "mime": "application/vnd.openxmlformats-officedocument.presentationml.presentation"
+  },
+  {
+   "name": "Seminar1.pdf",
+   "enc": "e4943293d9f5.bin",
+   "size": 1434697,
+   "mime": "application/pdf"
+  }
+ ]
+}

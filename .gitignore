@@ -1,0 +1,4 @@
+# 原始簡報絕對不能進 git（repo 是公開的）
+src/
+.DS_Store
+node_modules/
