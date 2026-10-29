@@ -7,9 +7,15 @@
 - 密碼為隨機產生的 6 字，由使用者自行保管，未記錄於任何檔案。
 - 雲端 session 無法在使用者的 GitHub 帳號建立 repo，專案改由本機資料夾 `/Users/ryanchang/Codes/awesome-cloud` 接手。
 
+- 本機接手：`git init -b main`，`git ls-files` 確認無 `src/` 後 commit（460031f）。
+- 建立公開 repo `ryanxuan930/awesome-cloud` 並 push；以 API 啟用 GitHub Pages（`main` / `/docs`），build 成功。
+- 預設網址 `https://ryanxuan930.github.io/awesome-cloud/` 上線：首頁 200、標題正確、`meta.json` 與 `.bin` 皆 200（`.bin` 大小 = 原檔 + 28 bytes）。`index.html` 的 fetch 皆為相對路徑，子路徑可用；https 已強制。
+- 本次接手沒有密碼，未重跑 `test/e2e.cjs`；`docs/` 內容未變動（沿用上次實測通過的版本）。
+
 ### 待辦
-- [ ] `git init -b main`、建立 GitHub repo 並 push（先確認 `git ls-files` 沒有 `src/`）
-- [ ] 決定自訂網域，寫入 `docs/CNAME`
-- [ ] GitHub Pages：Source = `main` / `/docs`，填 Custom domain，憑證核發後勾 Enforce HTTPS
+- [x] `git init -b main`、建立 GitHub repo 並 push
+- [x] GitHub Pages：Source = `main` / `/docs`（預設網域，https 已強制）
+- [ ] 用密碼對線上網址跑一次 e2e：`node test/e2e.cjs https://ryanxuan930.github.io/awesome-cloud/ <密碼> src /tmp/dl`
+- [ ] （選用）決定自訂網域，寫入 `docs/CNAME`，Pages 填 Custom domain，憑證核發後勾 Enforce HTTPS
 - [ ] DNS：新增 CNAME，子網域指向 `<帳號>.github.io`
 - [ ] 現場實測：在簡報電腦上用短網址下載一次
